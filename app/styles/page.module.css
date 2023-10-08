@@ -1,0 +1,250 @@
+.ourWork,
+.logos,
+.footer,
+.OurService,
+.projects {
+  margin: 200px auto;
+}
+
+/* ---------------------------------------------------------- */
+.toggleShow {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 90px auto;
+  transition: 0.4s;
+}
+
+/* ---------------------------------------------------------- */
+.ourWork,
+.OurService {
+  display: flex;
+}
+
+.leftSide {
+  width: 20%;
+  padding: 10px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.rightSide {
+  width: 80%;
+  padding: 15px;
+}
+
+.buttonsContainer {
+  position: absolute;
+  left: 25%;
+  bottom: 30%;
+}
+
+.buttonsContainer button {
+  margin: 15px;
+  background-color: transparent;
+}
+
+/* ----------------------------------------------------- */
+.logos img {
+  width: 70%;
+  margin: 70px 50px;
+}
+
+/* ----------------------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.footer ul {
+  margin: 50px 0;
+}
+
+.footer ul li:not(:first-child) {
+  margin: 15px 0 25px 0;
+}
+
+.leftFooter {
+  width: 50%;
+}
+
+.rightFooter {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  margin-bottom: 50px;
+}
+
+/* ----------------------------------------------------- */
+.about {
+  transition: 0.5s;
+}
+
+.rightAbout {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0 35px;
+  margin: 100px 0;
+}
+
+.aboutLimscte {
+  width: 80%;
+  padding: 300px 0;
+  margin: 0 auto;
+}
+
+.aboutLimscte p {
+  font-size: 40px;
+  margin-bottom: 50px;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------- */
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.service h1 {
+  text-align: end;
+}
+
+.service span {
+  text-align: start;
+}
+
+.rightSide h1:first-child {
+  margin-bottom: 100px;
+}
+
+.OurService .rightSide {
+  width: 70%;
+}
+
+/* ----------------------------------------------------- */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project {
+  width: 90%;
+  margin: 100px auto;
+  border: 20px solid #0404045b;
+  border-radius: 20px;
+  box-shadow: 0 0 50px 10px rgb(2, 94, 94);
+}
+
+/* ----------------------------------------------------- */
+.loading {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------- */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .leftFooter {
+    width: 100%;
+    order: 2;
+    margin: 100px auto;
+    text-align: center;
+  }
+
+  .rightFooter {
+    width: 100%;
+    order: 1;
+  }
+
+  .info1 {
+    width: 50%;
+    float: left;
+  }
+
+  .info2 {
+    width: 50%;
+    float: right;
+  }
+
+  .aboutLimscte p {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .service {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .service h1 {
+    order: 1;
+    text-align: start;
+  }
+
+  .service span {
+    order: 2;
+  }
+
+  .logos img {
+    width: 50%;
+  }
+}
+
+@media (max-width:1200px) {
+  .toggleShow {
+    display: block;
+  }
+
+  .active {
+    filter: blur(35px);
+  }
+
+  .navbar li {
+    opacity: 0;
+  }
+
+  .nav {
+    align-items: start;
+    padding-bottom: 150px;
+  }
+
+  .show li {
+    opacity: 1;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column;
+    position: relative;
+    text-align: center !important;
+    top: 150px;
+    left: -50%;
+    right: 50%;
+    margin: 30px auto !important;
+  }
+}

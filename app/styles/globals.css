@@ -1,0 +1,295 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  border: none;
+  font-family: Glancyr_Regular, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: white;
+  font-size: 20px;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------- */
+.carsouel {
+  width: 80%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.inner-carsouel {
+  display: flex;
+}
+
+.item {
+  min-width: 26rem;
+  min-height: 26rem;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------- */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .3s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: #DEDFDE;
+  border-radius: 5px;
+  transition-duration: .3s;
+
+}
+
+#checkbox:checked+.toggle .bars {
+  margin-left: 13px;
+}
+
+#checkbox:checked+.toggle #bar2 {
+  transform: rotate(135deg);
+  margin-left: 0;
+  transform-origin: center;
+  transition-duration: .3s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+  transform: rotate(45deg);
+  transition-duration: .3s;
+  transform-origin: left center;
+}
+
+#checkbox:checked+.toggle #bar3 {
+  transform: rotate(-45deg);
+  transition-duration: .3s;
+  transform-origin: left center;
+}
+
+/* ---------------------------------------------------------- */
+.fa-icon {
+  font-size: 50px !important;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.fa-icon:hover {
+  color: gray;
+}
+
+.iconDown {
+  font-size: 80px !important;
+}
+
+.scrollButton {
+  background-color: transparent;
+}
+
+/* ---------------------------------------------------------- */
+.header {
+  font-size: 3rem;
+  font-family: Glancyr_Regular;
+  color: #DEDFDE;
+  transition: 0.5s;
+}
+
+.subHeader {
+  font-size: 4rem;
+  font-family: Glancyr_ExtraLight;
+  color: #d8d8d8;
+}
+
+.title,
+.description {
+  font-size: 2rem;
+  margin-top: 25px;
+  text-align: center;
+  color: #DEDFDE;
+}
+
+.description {
+  font-family: Glancyr_ExtraLight;
+}
+
+p,
+span {
+  font-family: Glancyr_ExtraLight;
+  color: #cdcdcd;
+}
+
+/* ---------------------------------------------------------- */
+hr {
+  height: 1px;
+  background-color: rgb(171, 171, 171);
+}
+
+/* ---------------------------------------------------------- */
+h1 {
+  font-size: 24px;
+}
+
+/* ---------------------------------------------------------- */
+input,
+select,
+textarea {
+  padding: 15px;
+  background-color: #121212;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+label {
+  margin: 15px 0;
+}
+
+.buttons {
+  margin: 30px 0;
+  padding: 15px 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  border: 1px solid gray;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.buttons:hover {
+  box-shadow: inset 0 -55px 0 rgba(255, 255, 255, 50);
+  color: black;
+}
+
+/* ---------------------------------------------------------- */
+.ul li {
+  display: inline-flex;
+  margin: 0 30px;
+  font-size: 30px;
+  color: #cdcdcd;
+}
+
+ul li:not(:first-child):hover,
+.ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------- */
+.image {
+  width: 80%;
+  transition: 0.5s;
+}
+
+.background {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------- */
+@font-face {
+  font-family: 'Glancyr_ExtraLight';
+  src: url('../../public/Fonts/Glancyr-ExtraLight.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr_Regular';
+  src: url('../../public/Fonts/Glancyr-Regular.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header {
+    font-size: 35px;
+  }
+
+  .subHeader {
+    font-size: 30px;
+  }
+
+  p,
+  span {
+    font-size: 14px;
+  }
+
+  ul li span {
+    font-size: 27px !important;
+  }
+
+  .iconDown {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .item {
+    min-width: 15rem;
+    min-height: 15rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header {
+    font-size: 45px;
+  }
+
+  .subHeader {
+    font-size: 45px;
+  }
+
+  p,
+  span {
+    font-size: 18px;
+  }
+
+  ul li span {
+    font-size: 35px !important;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .iconDown {
+    display: none;
+  }
+}
